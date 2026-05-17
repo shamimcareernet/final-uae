@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careernet Middle East | Recruitment Solutions and Executive Search</title>
+    <meta name="description" content="25+ years as a trusted recruitment company providing recruitment solutions, executive search, and RPO services globally.">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           1. CSS Variables & Reset
+           ========================================================================== */
+        :root {
+            --primary-blue: #008CB6;
+            --action-yellow: #FCB813;
+            --dark-blue: #06325E;
+            --pure-black: #000000;
+            --light-grey: #F7F7F7;
+            --white: #ffffff;
+            --hover-blue: #007a9f;
+            --premium-gradient: linear-gradient(135deg, var(--dark-blue) 0%, #08406c 50%, var(--primary-blue) 100%);
+            --transition: all 0.3s ease-in-out;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--white);
+            color: var(--pure-black);
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ==========================================================================
+           2. Typography
+           ========================================================================== */
+        h1, h2, h3, h4, h5 { font-weight: 700; }
+        h1 { font-size: 40px; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.5px; }
+        h2 { font-size: 32px; line-height: 1.2; color: var(--dark-blue);  letter-spacing: -0.5px; text-align: center; }
+        h3 { font-size: 24px; line-height: 1.3; color: var(--dark-blue); margin-bottom: 15px; }
+        h4 { font-size: 20px; line-height: 1.4; color: var(--dark-blue); margin-bottom: 10px; }
+        h5 { font-size: 18px; line-height: 1.4; color: var(--dark-blue); }
+        
+        p { margin-bottom: 15px; color: #000000; }
+        
+        a { color: var(--primary-blue); text-decoration: none; font-weight: 700; transition: var(--transition); }
+        a:hover { color: var(--hover-blue); }
+
+        a[href^="mailto:"], a[href^="tel:"] { color: inherit; text-decoration: none; transition: var(--transition); }
+        a[href^="mailto:"]:hover, a[href^="tel:"]:hover { color: var(--action-yellow) !important; }
+
+        .gradient-text { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; }
+
+        @media (min-width: 992px) {
+            h1 { font-size: 50px; } 
+            h2 { font-size: 40px; }
+            h3 { font-size: 28px; }
+            h4 { font-size: 22px; }
+            h5 { font-size: 18px; }
+        }
+
+        /* ==========================================================================
+           3. Layout & Structure
+           ========================================================================== */
+        .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 60px 0; position: relative; overflow: hidden; }
+        .section-alt { background: linear-gradient(to bottom, #ffffff, var(--light-grey)); }
+        
+        .section-gradient { background: var(--premium-gradient); color: var(--white); }
+        .section-gradient h2, .section-gradient h3, .section-gradient h4, .section-gradient p { color: var(--white); }
+        
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .mb-30 { margin-bottom: 30px; } 
+        .mt-30 { margin-top: 30px; }
+
+        .grid { display: grid; gap: 30px; grid-template-columns: 1fr; }
+        .grid-mobile-2 { grid-template-columns: repeat(2, 1fr); gap: 20px; } 
+        .grid-35-65 { display: grid; gap: 30px; grid-template-columns: 1fr; }
+        
+        @media (min-width: 768px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 992px) { 
+            .grid-3 { grid-template-columns: repeat(3, 1fr); } 
+            .grid-4 { grid-template-columns: repeat(4, 1fr); } 
+            .grid-35-65 { grid-template-columns: 35% calc(65% - 30px); }
+        }
+
+        .swiper { padding: 15px 15px 50px 15px !important; margin: -15px -15px 0 -15px !important; overflow: hidden; }
+        .swiper-slide { height: auto; display: flex; }
+        .swiper-pagination { bottom: 0 !important; }
+        .swiper-pagination-bullet { width: 10px; height: 10px; background-color: #c0c0c0; opacity: 1; transition: var(--transition); }
+        .swiper-pagination-bullet-active { background-color: var(--primary-blue); width: 30px; border-radius: 10px; }
+
+        @media (max-width: 767px) {
+            .brands-mobile-grid .swiper-wrapper { display: grid !important; grid-template-columns: 1fr; gap: 20px; transform: none !important; }
+            .brands-mobile-grid .swiper-slide { width: 100% !important; margin: 0 !important; }
+            .brands-mobile-grid .swiper-pagination { display: none !important; }
+        }
+
+        /* ==========================================================================
+           6. Navigation & Menus
+           ========================================================================== */
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); padding: 15px 0; transition: var(--transition); }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; position: relative; }
+        .nav-logo img { height: 35px; width: auto; display: block; }
+        
+        .hamburger { display: flex; flex-direction: column; justify-content: space-around; width: 32px; height: 24px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1001; }
+        .hamburger span { width: 100%; height: 3px; background: var(--dark-blue); border-radius: 10px; transition: var(--transition); transform-origin: left center; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; width: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg); }
+
+        .nav-menu { display: flex; flex-direction: column; position: fixed; top: 65px; left: 100%; width: 100%; height: calc(100vh - 65px); background: var(--white); padding: 30px 24px; gap: 25px; transition: var(--transition); overflow-y: auto; visibility: hidden; }
+        .nav-menu.active { left: 0; visibility: visible; }
+        .nav-link { color: var(--pure-black); font-size: 18px; font-weight: 700; border-bottom: 1px solid var(--light-grey); padding-bottom: 15px; }
+
+        .dropdown { position: relative; width: 100%; padding-bottom: 20px; margin-bottom: -20px; }
+        .dropbtn { background: transparent; color: var(--pure-black); padding: 0; font-size: 18px; border: none; cursor: pointer; font-family: 'Lato', sans-serif; font-weight: 700; display: flex; align-items: center; justify-content: space-between; width: 100%; transition: var(--transition); border-bottom: 1px solid var(--light-grey); padding-bottom: 15px;}
+        .dropbtn:hover { color: var(--primary-blue); }
+        .flag-icon-img { width: 20px; height: 14px; border-radius: 2px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .dropdown-content { display: none; background-color: var(--white); padding-top: 10px; }
+        .dropdown.active .dropdown-content { display: block; }
+        .dropdown-content a { color: var(--pure-black); padding: 12px 20px; text-decoration: none; display: flex; align-items: center; gap: 12px; font-weight: 700; border-radius: 8px; margin-bottom: 5px; font-size: 16px; transition: var(--transition);}
+        .dropdown-content a:hover { background-color: var(--light-grey); color: var(--primary-blue); }
+
+        @media (min-width: 992px) {
+            .hamburger { display: none; }
+            .nav-menu { position: static; height: auto; width: auto; flex-direction: row; align-items: center; background: none; padding: 0; visibility: visible; overflow-y: visible; gap: 30px; }
+            .nav-link { font-size: 16px; border-bottom: none; padding-bottom: 0; }
+            .dropdown { width: auto; padding-bottom: 20px; margin-bottom: -20px; }
+            .dropbtn { font-size: 14px; border-bottom: none; padding-bottom: 0; gap: 6px; justify-content: flex-start; }
+            
+            .dropdown-content { position: absolute; top: 100%; right: 0; min-width: 90px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-radius: 10px; border: 1px solid var(--light-grey); margin-top: 0; padding: 5px; }
+            .dropdown-content a { padding: 8px 12px; font-size: 14px; gap: 8px; margin-bottom: 0; border-radius: 4px; }
+            .dropdown-content .flag-icon-img { width: 16px; height: 11px; }
+
+            .dropdown:hover .dropdown-content { display: block; animation: fadeUp 0.2s ease; }
+            .dropdown.active .dropdown-content { display: none; }
+            .dropdown:hover .dropdown-content { display: block; }
+        }
+
+        /* ==========================================================================
+           7. Buttons & CTAs
+           ========================================================================== */
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 30px; border: none; border-radius: 30px; font-family: 'Lato', sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; transition: var(--transition); width: 100%; text-decoration: none; }
+        @media (min-width: 768px) { .btn { width: auto; } }
+        @media (max-width: 767px) { .mobile-cta-reduce { width: max-content !important; margin: 0; display: inline-block; } }
+        
+        .btn-primary { background: var(--primary-blue); color: var(--white); border: 2px solid var(--primary-blue); }
+        .btn-primary:hover { background: transparent; color: var(--primary-blue); transform: translateY(-3px); }
+        
+        .btn-secondary { background: var(--action-yellow); color: var(--pure-black); border: 2px solid var(--action-yellow); }
+        .btn-secondary:hover { background: transparent; color: var(--white); border-color: var(--white); transform: translateY(-3px); }
+        
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.6); }
+        .btn-outline:hover { background: var(--white); color: var(--dark-blue); border-color: var(--white); transform: translateY(-3px); }
+
+        .tabs-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+        .custom-tab-btn { padding: 12px 25px; border: 2px solid var(--primary-blue); border-radius: 30px; background: transparent; color: var(--primary-blue); font-weight: 700; cursor: pointer; transition: var(--transition); font-family: 'Lato', sans-serif; font-size: 15px;}
+        .custom-tab-btn.active, .custom-tab-btn:hover { background: var(--primary-blue); color: var(--white); box-shadow: 0 10px 20px rgba(0,140,182,0.2); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeInTab 0.8s ease; }
+        @keyframes fadeInTab { from { opacity: 0; } to { opacity: 1; } }
+
+        .mobile-accordion-btn { display: none; width: 100%; text-align: left; padding: 15px 20px; background: var(--light-grey); border: 1px solid rgba(0,0,0,0.05); border-radius: 8px; margin-bottom: 10px; font-weight: 700; color: var(--dark-blue); justify-content: space-between; align-items: center; transition: var(--transition); font-family: 'Lato', sans-serif; font-size: 16px; cursor: pointer; }
+        .mobile-accordion-btn i { transition: transform 0.3s ease; }
+        .mobile-accordion-btn.active { background: var(--primary-blue); color: var(--white); margin-bottom: 15px;}
+        .mobile-accordion-btn.active i { transform: rotate(180deg); }
+        
+        @media (max-width: 767px) {
+            .tabs-container { display: none; }
+            .mobile-accordion-btn { display: flex; }
+            .tab-content { margin-bottom: 20px; padding-bottom: 10px; }
+        }
+
+        /* Contact Tabs Specific */
+        .contact-tabs-container { display: flex; gap: 15px; justify-content: center; margin-bottom: 30px; }
+        .contact-tab-btn { padding: 10px 25px; border: 2px solid var(--primary-blue); background: transparent; color: var(--primary-blue); font-weight: bold; border-radius: 30px; cursor: pointer; transition: var(--transition); }
+        .contact-tab-btn.active { background: var(--primary-blue); color: var(--white); }
+        .contact-tab-content { display: none; animation: fadeInTab 0.8s ease; }
+        .contact-tab-content.active { display: block; }
+
+        /* ==========================================================================
+           8. Brand Solutions Section (Modern UI/UX Update)
+           ========================================================================== */
+        .brand-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .brand-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        @media (max-width: 991px) {
+            .brand-grid-2, .brand-grid-3 { grid-template-columns: 1fr; gap: 15px; }
+        }
+
+        .brand-card-modern {
+            background: var(--white); border: 1px solid rgba(0,0,0,0.06); border-radius: 12px;
+            padding: 28px 24px; height: 100%; display: flex; flex-direction: column; transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02); position: relative;
+        }
+        .brand-card-modern:hover { transform: translateY(-4px); box-shadow: 0 12px 25px rgba(0,140,182,0.1); border-color: rgba(0,140,182,0.2); }
+        
+        /* ==========================================================================
+           9. UI Components: Cards, Icons, Overlays
+           ========================================================================== */
+        .card { background: var(--white); border-radius: 16px; padding: 35px 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.03); transition: var(--transition); border: 1px solid rgba(0,0,0,0.04); width: 100%; height: 100%; display: flex; flex-direction: column; position: relative; overflow: hidden; z-index: 1; text-align: left; text-decoration: none; color: inherit; cursor: pointer;}
+        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 140, 182, 0.12); border-color: rgba(0, 140, 182, 0.3); color: inherit; }
+        
+        .card-alt { background: var(--light-grey); border: none; box-shadow: none; }
+        .card-alt:hover { background: var(--white); box-shadow: 0 20px 40px rgba(0, 140, 182, 0.12); border-color: rgba(0, 140, 182, 0.3); }
+
+        #solutions .card { text-align: center; align-items: center; }
+        #solutions .custom-icon { justify-content: center; }
+
+        .custom-icon { margin-bottom: 20px; display: inline-flex; align-items: center; justify-content: flex-start; transition: var(--transition); flex-shrink: 0; font-size: 40px; }
+        #solutions .custom-icon i { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; }
+        .card:hover .custom-icon { transform: scale(1.1); }
+        
+        .read-more-text { display: inline-flex; align-items: center; gap: 5px; font-size: 15px; font-weight: 700; color: var(--primary-blue); transition: var(--transition); }
+        .card:hover .read-more-text { color: var(--action-yellow); }
+
+        .expertise-card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; display: flex; align-items: center; gap: 20px; transition: var(--transition); text-align: left; position: relative; overflow: hidden; }
+        .expertise-card .icon-box { width: 50px; height: 50px; flex-shrink: 0; background: rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--white); }
+        .expertise-card h4 { font-size: 15px; margin-bottom: 0; line-height: 1.4; color: var(--white); }
+
+        @media (max-width: 767px) {
+            #expertise .grid-4 {
+                display: flex;
+                flex-direction: column;
+                background: rgba(255,255,255,0.05);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,255,255,0.15);
+                border-radius: 16px;
+                padding: 15px;
+                gap: 10px;
+                margin-top: 20px !important;
+                align-items: flex-start;
+            }
+            #expertise .expertise-card {
+                background: transparent !important;
+                border: none !important;
+                padding: 10px 5px !important;
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+                flex-direction: row;
+                gap: 12px;
+                justify-content: flex-start;
+                text-align: left;
+            }
+            #expertise .expertise-card .icon-box {
+                width: 35px !important;
+                height: 35px !important;
+                font-size: 18px !important;
+            }
+            #expertise .expertise-card h4 {
+                font-size: 15px !important;
+            }
+        }
+
+        .glass-card { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 10px; padding: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); text-align: left; height: 100%; transition: var(--transition); overflow: hidden; display: flex; flex-direction: column; }
+        .glass-card:hover { transform: translateY(-8px); background: rgba(255, 255, 255, 0.7); box-shadow: 0 15px 35px rgba(0, 140, 182, 0.15); }
+        .glass-card img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 0; border-radius: 0; }
+        .glass-card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+
+        /* ==========================================================================
+           10. Hero Banner & Specialized Sections
+           ========================================================================== */
+        @keyframes heroFadeScale {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes heroFadeUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes ctaSlideHighlight {
+            0% { transform: translateY(0); box-shadow: 0 0 0 rgba(252, 184, 19, 0); }
+            50% { transform: translateY(-8px); box-shadow: 0 15px 25px rgba(252, 184, 19, 0.4); }
+            100% { transform: translateY(0); box-shadow: 0 0 0 rgba(252, 184, 19, 0); }
+        }
+
+        .img-fluid { width: 100%; height: auto; display: block; object-fit: cover; }
+        
+        #hero { min-height: 100vh; padding-top: 80px; padding-bottom: 0; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .hero-bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+        .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.65); z-index: 1; backdrop-filter: blur(2px); }
+        .hero-container { height: 100%; display: flex; align-items: center; justify-content: center; width: 100%; z-index: 2; position: relative;}
+        .hero-content { align-self: center; padding: 40px 0; max-width: 850px; text-align: center; }
+        
+        .hero-content h1 { opacity: 0; animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .hero-content p { opacity: 0; animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; }
+        .hero-buttons { opacity: 0; animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards; display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px; justify-content: center; }
+        .hero-buttons .btn-secondary { animation: ctaSlideHighlight 1s ease-in-out 1.5s forwards; }
+        
+        @media (max-width: 991px) {
+            #hero { height: auto; min-height: 100vh; padding-top: 100px; }
+            .hero-content h1 { font-size: 36px; }
+            .hero-content p { margin: 0 auto 30px auto; }
+        }
+
+        .marquee-wrap { width: 100%; overflow: hidden; background: var(--white); padding: 40px 0; border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .marquee { display: flex; width: max-content; animation: marquee 35s linear infinite; gap: 100px; align-items: center; padding: 0 50px; }
+        .marquee:hover { animation-play-state: paused; }
+        .marquee img { height: 50px; width: 170px; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: all 0.3s ease; cursor: pointer; }
+        .marquee img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        @keyframes blobBounce { 0%, 100% { transform: translateY(0) scale(1); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; } 50% { transform: translateY(-20px) scale(1.05); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; } }
+        .blob-bg { position: absolute; filter: blur(60px); z-index: 0; opacity: 0.6; animation: blobBounce 10s infinite alternate; }
+        .blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: rgba(0, 140, 182, 0.2); }
+        .blob-2 { bottom: -20%; right: -10%; width: 600px; height: 600px; background: rgba(252, 184, 19, 0.15); animation-delay: 2s; }
+
+        /* ==========================================================================
+           11. Forms & Modals 
+           ========================================================================== */
+        .form-control { 
+            width: 100%; 
+            padding: 16px 20px; 
+            border-radius: 8px; 
+            background: rgba(255, 255, 255, 0.4); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.5); 
+            font-family: 'Lato', sans-serif; 
+            font-size: 16px; 
+            color: var(--pure-black);
+            transition: var(--transition); 
+            margin-bottom: 20px; 
+            outline: none; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .form-control::placeholder { color: rgba(0,0,0,0.6); }
+        .form-control:focus { 
+            border-color: var(--primary-blue); 
+            background: rgba(255, 255, 255, 0.8); 
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,140,182,0.1); 
+        }
+        
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 2000; display: none; justify-content: center; align-items: center; padding: 20px; opacity: 0; transition: opacity 0.4s ease; }
+        .modal-overlay.active { display: flex; opacity: 1; }
+        .modal-box { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 20px; width: 100%; max-width: 700px; max-height: 90vh; overflow-y: auto; padding: 40px; position: relative; transform: translateY(30px); transition: transform 0.4s ease; box-shadow: 0 25px 50px rgba(0,0,0,0.2); }
+        .modal-box-form { max-width: 850px; }
+        .modal-overlay.active .modal-box { transform: translateY(0); }
+        
+        .modal-close { position: absolute; top: 20px; right: 20px; background: transparent; border: none; font-size: 28px; cursor: pointer; color: var(--dark-blue); transition: var(--transition); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+        .modal-close:hover { color: var(--white); background: var(--primary-blue); }
+
+        .cs-section { margin-bottom: 20px; }
+        .cs-section h4 { color: #184770; margin-bottom: 10px; font-size: 18px;  }
+        .cs-section ul { padding-left: 20px; margin-bottom: 15px; }
+        .cs-section ul li { margin-bottom: 8px; font-size: 15px; color: #000000; }
+
+        /* Glassmorphism Cookie Consent Banner */
+        .cookie-banner { 
+            position: fixed; bottom: 20px; left: 20px; right: auto; width: 380px; 
+            background: rgba(15, 20, 30, 0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; color: #ffffff; padding: 25px; 
+            z-index: 9999; display: flex; flex-direction: column; gap: 15px; transform: translateY(150%); 
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 15px 40px rgba(0,0,0,0.4); 
+        }
+        .cookie-banner.show { transform: translateY(0); }
+        .cookie-banner p { margin: 0; font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.5; }
+        .cookie-banner a { color: var(--action-yellow); text-decoration: underline; cursor: pointer; }
+        .cookie-banner .btn-group { display: flex; flex-wrap: wrap; gap: 10px; width: 100%; }
+        .cookie-banner .btn { padding: 10px 15px; font-size: 13px; min-height: auto; flex: 1; border-radius: 8px; white-space: nowrap;}
+        .cookie-banner .btn-outline { border: 1px solid rgba(255,255,255,0.4); color: white; background: transparent;}
+        .cookie-banner .btn-outline:hover { background: rgba(255,255,255,0.1); color: white; }
+        @media (max-width: 767px) { .cookie-banner { bottom: 10px; right: 10px; left: 10px; width: auto; } }
+
+        /* ==========================================================================
+           13. Footer
+           ========================================================================== */
+        .modern-footer { background-color: var(--pure-black); color: var(--white); padding-top: 60px; position: relative; border-top: 4px solid var(--action-yellow);}
+        .modern-footer .social-links a { 
+            display: inline-flex; align-items: center; justify-content: center; 
+            width: 36px; height: 36px; border-radius: 50%; 
+            background: rgba(255,255,255,0.1); color: var(--white); 
+            transition: var(--transition); text-decoration: none; font-size: 18px;
+        }
+        .modern-footer .social-links a:hover { background: var(--primary-blue); transform: translateY(-3px); }
+
+        /* Custom Bullet List */
+        .gradient-bullet-list { list-style: none; padding: 0; }
+        .gradient-bullet-list li { display: flex; align-items: flex-start; margin-bottom: 16px; font-size: 16px; color: var(--pure-black); line-height: 1.5;}
+        .gradient-bullet-list li::before { content: ''; flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--premium-gradient); margin-right: 15px; margin-top: 7px; }
+
+        @media (max-width: 767px) {
+            #contact .container { padding: 0 10px !important; }
+            .contact-form-wrapper { padding: 50px 20px !important; }
+        }
+
+        .country-code-input { display: none; }
+        .country-code-input.active { display: block !important; }
+        .country-select.hidden { display: none !important; }
+        .selected-flag.hidden { display: none !important; }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <img src="img/CN_Logo_Color_Light_BG.svg" alt="Careernet">
+            </a>
+            
+            <button class="hamburger" id="mobileToggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#brands" class="nav-link">Brands</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#success-stories" class="nav-link">Success Stories</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                
+                <a href="#contact" class="btn btn-primary mobile-cta-reduce" style="padding: 10px 24px; min-height: auto; font-size: 15px;">Contact Us</a>
+
+                <div class="dropdown" id="langDropdown">
+                    <button class="dropbtn" id="langDropBtn">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" class="flag-icon-img"> UAE 
+                        </span>
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#"><img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" class="flag-icon-img"> UAE</a>
+                        <a href="https://careernet.in/"><img src="https://flagcdn.com/w40/in.png" alt="India Flag" class="flag-icon-img"> IND</a>
+                        <a href="#"><img src="https://flagcdn.com/w40/us.png" alt="US Flag" class="flag-icon-img"> US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="section section-gradient">
+        <video autoplay loop muted playsinline class="hero-bg-video">
+            <source src="https://www.shutterstock.com/shutterstock/videos/3769625065/preview/stock-footage-dubai-uae-january-dubai-museum-of-the-future-view-from-downtown-modern-futuristic.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        
+        <div class="container hero-container">
+            <div data-aos="fade-up" class="hero-content">
+                <h1 style="color: var(--white);">Making holistic talent solutions happen in the Middle East</h1>
+                <p style="font-size: 20px; opacity: 0.9; margin: 0 auto 30px auto; font-weight: 400; color: var(--white);">Helping organizations optimize the sourcing, assessing, and hiring of early-career to CXO talent worldwide for 25+ years.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#modal-hire" class="btn btn-secondary popup-trigger" style="width: auto;">Hire Great Talent</a>
+                    <a href="#modal-cv" class="btn btn-outline popup-trigger" style="width: auto;">Submit Your CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container" data-aos="fade-in">
+            <div class="grid-35-65 align-items-center">
+                <div data-aos="fade-in">
+                    <img src="img/Making-employability.webp" alt="About Careernet" class="img-fluid" style="border-radius: 20px;">
+                </div>
+                <div data-aos="fade-in" data-aos-delay="200" class="text-left">
+                    <h2 class="mb-30 gradient-text text-left" style="text-align: left;">We make great teams and dream careers happen</h2>
+                    <div style="font-size: 18px;">
+                        <p>Since 1999, Careernet has been a leading recruitment agency and recruitment company for Fortune 500 enterprises and high-growth technology firms across global markets.</p>
+                        
+                        <h4 style="margin-top: 20px; margin-bottom: 15px;">What we bring</h4>
+                        
+                        <ul class="gradient-bullet-list">
+                            <li>Expertise spanning industries, functions, and experience levels — from AI, robotics, and emerging tech startups to retail, e-commerce, hospitality, and beyond</li>
+                            <li>Full-lifecycle recruitment solutions: Permanent hiring, Staffing, Leadership search as an executive search company, Nationalization, Talent branding, Assessment-led hiring</li>
+                            <li>Strong global reach combined with a deep understanding of local markets</li>
+                            <li>A growing Middle East presence, with Dubai on-ground and global delivery centers</li>
+                        </ul>
+                        
+                        <p class="mt-4">Because the world needs great talent, we make it happen with the unified strength of our group brands: Careernet, HirePro, Longhouse, and MyCareernet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-gradient">
+        <div class="container">
+            <h2 class="mb-30" style="color: var(--white);" data-aos="fade-in">What sets us apart</h2>
+            
+            <div class="grid grid-mobile-2 grid-4 text-center mb-30">
+                <div data-aos="fade-in" data-aos-delay="100">
+                    <h3 style="color: var(--action-yellow); font-size: 44px; margin-bottom: 5px;"><span class="counter" data-target="1000">0</span>+</h3>
+                    <p style="font-weight: 700; font-size: 16px; color: var(--white);">Enterprise customers<br><span style="font-size: 13px; opacity: 0.7; font-weight: 400;">(150+ Fortune 500 companies)</span></p>
+                </div>
+                <div data-aos="fade-in" data-aos-delay="200">
+                    <h3 style="color: var(--action-yellow); font-size: 44px; margin-bottom: 5px;"><span class="counter" data-target="100">0</span>M+</h3>
+                    <p style="font-weight: 700; font-size: 16px; color: var(--white);">Assessments delivered<br><span style="font-size: 13px; opacity: 0.7; font-weight: 400;">Globally</span></p>
+                </div>
+                <div data-aos="fade-in" data-aos-delay="300">
+                    <h3 style="color: var(--action-yellow); font-size: 44px; margin-bottom: 5px;"><span class="counter" data-target="10">0</span>M+</h3>
+                    <p style="font-weight: 700; font-size: 16px; color: var(--white);">Candidate network<br><span style="font-size: 13px; opacity: 0.7; font-weight: 400;">Extensive reach</span></p>
+                </div>
+                <div data-aos="fade-in" data-aos-delay="400">
+                    <h3 style="color: var(--action-yellow); font-size: 44px; margin-bottom: 5px;"><span class="counter" data-target="30">0</span>+</h3>
+                    <p style="font-weight: 700; font-size: 16px; color: var(--white);">Countries served<br><span style="font-size: 13px; opacity: 0.7; font-weight: 400;">Worldwide presence</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="section section-alt" style="background: var(--white);">
+        <div class="container text-center">
+            <div data-aos="fade-in">
+                <h2 class="gradient-text mb-30" style="display: inline-block;">We make it happen at every phase of the recruitment supply chain</h2>
+            </div>
+            
+            <div class="grid grid-3" style="margin-top: 50px; text-align: left;" data-aos="fade-in" data-aos-delay="200">
+                <div class="card card-alt">
+                    <div class="custom-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                    <h4 style="font-size: 18px;">Recruitment Process Outsourcing</h4>
+                    <p style="font-size: 15px; margin: 0; flex-grow: 1;">SLA-driven niche to high-volume hiring</p>
+                </div>
+                <div class="card card-alt">
+                    <div class="custom-icon"><i class="bi bi-person-check-fill"></i></div>
+                    <h4 style="font-size: 18px;">Permanent hiring</h4>
+                    <p style="font-size: 15px; margin: 0; flex-grow: 1;">The best talent for a single role or bulk mandates</p>
+                </div>
+                <div class="card card-alt">
+                    <div class="custom-icon"><i class="bi bi-people-fill"></i></div>
+                    <h4 style="font-size: 18px;">IT and professional staffing</h4>
+                    <p style="font-size: 15px; margin: 0; flex-grow: 1;">Scalable teams with operational ownership</p>
+                </div>
+                <div class="card card-alt">
+                    <div class="custom-icon"><i class="bi bi-star-fill"></i></div>
+                    <h4 style="font-size: 18px;">Premium Hiring as a Service (PHaaS)</h4>
+                    <p style="font-size: 15px; margin: 0; flex-grow: 1;">Sourcing and screening with first-round interviews</p>
+                </div>
+                <div class="card card-alt">
+                    <div class="custom-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                    <h4 style="font-size: 18px;">Skill assessments</h4>
+                    <p style="font-size: 15px; margin: 0; flex-grow: 1;">Fraud-proof technical and functional evaluations</p>
+                </div>
+                <div class="card card-alt">
+                    <div class="custom-icon"><i class="bi bi-camera-video-fill"></i></div>
+                    <h4 style="font-size: 18px;">Interviewing solution</h4>
+                    <p style="font-size: 15px; margin: 0; flex-grow: 1;">Human and agentic AI interviews</p>
+                </div>
+                <div class="card card-alt">
+                    <div class="custom-icon"><i class="bi bi-briefcase-fill"></i></div>
+                    <h4 style="font-size: 18px;">Executive search</h4>
+                    <p style="font-size: 15px; margin: 0; flex-grow: 1;">CXO and senior leadership hiring across sectors</p>
+                </div>
+                <div class="card card-alt">
+                    <div class="custom-icon"><i class="bi bi-compass-fill"></i></div>
+                    <h4 style="font-size: 18px;">Leadership advisory</h4>
+                    <p style="font-size: 15px; margin: 0; flex-grow: 1;">Counsel on succession planning and inclusive leadership</p>
+                </div>
+                <div class="card card-alt">
+                    <div class="custom-icon"><i class="bi bi-megaphone-fill"></i></div>
+                    <h4 style="font-size: 18px;">Employer branding</h4>
+                    <p style="font-size: 15px; margin: 0; flex-grow: 1;">Strong visibility across early-career to leadership professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-solutions" class="section section-gradient">
+        <div class="container text-center">
+            <h2 class="mb-30" style="color: var(--white);" data-aos="fade-in">Our featured solutions</h2>
+            <div class="grid grid-2 mt-5 text-left" data-aos="fade-in" data-aos-delay="200" style="gap: 30px;">
+                <div class="expertise-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="icon-box" style="background: rgba(255,255,255,0.1); color: var(--white);"><i class="bi bi-globe"></i></div>
+                    <div>
+                        <h4 style="font-size: 18px; color: var(--white);">Nationalization</h4>
+                        <p style="font-size: 15px; color: var(--white); opacity: 0.9; margin:0;">Hiring of local nationals, compliance advisory, and talent programs</p>
+                    </div>
+                </div>
+                <div class="expertise-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="icon-box" style="background: rgba(255,255,255,0.1); color: var(--white);"><i class="bi bi-building"></i></div>
+                    <div>
+                        <h4 style="font-size: 18px; color: var(--white);">Market entry hiring (Middle East)</h4>
+                        <p style="font-size: 15px; color: var(--white); opacity: 0.9; margin:0;">Support for building teams from scratch for new entities</p>
+                    </div>
+                </div>
+                <div class="expertise-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="icon-box" style="background: rgba(255,255,255,0.1); color: var(--white);"><i class="bi bi-diagram-2"></i></div>
+                    <div>
+                        <h4 style="font-size: 18px; color: var(--white);">Cross-border and blended hiring</h4>
+                        <p style="font-size: 15px; color: var(--white); opacity: 0.9; margin:0;">Combination of local and offshore talent for scale and continuity</p>
+                    </div>
+                </div>
+                <div class="expertise-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="icon-box" style="background: rgba(255,255,255,0.1); color: var(--white);"><i class="bi bi-laptop"></i></div>
+                    <div>
+                        <h4 style="font-size: 18px; color: var(--white);">Remote-to-onsite models</h4>
+                        <p style="font-size: 15px; color: var(--white); opacity: 0.9; margin:0;">Support for India (GIC) hiring and phased relocation through the India–Middle East talent corridor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="brands" class="section section-alt">
+        <div class="container">
+            <div class="text-center mb-30" data-aos="fade-in">
+                <h2 class="gradient-text" style="font-size: clamp(24px, 3vw, 36px);">Integrated recruitment solutions through our specialized group brands</h2>
+            </div>
+            
+            <div class="swiper init-swiper brands-mobile-grid" data-aos="fade-in" data-aos-delay="200">
+                <script type="application/json" class="swiper-config">
+                    { "loop": true, "speed": 1000, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 20, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "0": { "enabled": false }, "768": { "enabled": true, "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "enabled": true, "slidesPerView": 4, "spaceBetween": 30 } } }
+                </script>
+                <div class="swiper-wrapper py-2">
+                    <div class="swiper-slide">
+                        <a href="#modal-brand-1" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
+                            <img src="img/CN_Logo_Color_Light_BG.svg" alt="Careernet" style="height: 35px; margin-bottom: 20px; object-fit: contain; object-position: left;">
+                            <p style="font-size: 15px; margin: 0; flex-grow: 1;">Holistic talent solutions</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#modal-brand-3" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
+                            <img src="img/HirePro_Full-color.svg" alt="HirePro" style="height: 32px; margin-bottom: 20px; object-fit: contain; object-position: left;">
+                            <p style="font-size: 15px; margin: 0; flex-grow: 1;">AI-powered recruitment automation at scale</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#modal-brand-2" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
+                            <img src="img/LH-Logo-without-by-line.svg" alt="Longhouse" style="height: 35px; margin-bottom: 20px; object-fit: contain; object-position: left;">
+                            <p style="font-size: 15px; margin: 0; flex-grow: 1;">Executive search and leadership advisory</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#modal-brand-4" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
+                            <img src="img/MYCN_Color_Without_Byline.svg" alt="MyCareernet" style="height: 35px; margin-bottom: 20px; object-fit: contain; object-position: left;">
+                            <p style="font-size: 15px; margin: 0; flex-grow: 1;">Employer branding and talent community engagement</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="section section-gradient" style="text-align: center;">
+        <div class="blob-bg blob-1"></div>
+        <div class="blob-bg blob-2"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <h2 style="color: var(--white);" data-aos="fade-in">Our industry expertise</h2>
+            
+            <div class="grid grid-4" style="margin-top: 40px;" data-aos="fade-in" data-aos-delay="200">
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-laptop"></i></div>
+                    <h4>Digital and Technology</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-cpu"></i></div>
+                    <h4>AI, Robotics, Emerging Tech</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-bank"></i></div>
+                    <h4>Banking and Financial Services</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-cart3"></i></div>
+                    <h4>Retail and E-Commerce</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-cup-hot"></i></div>
+                    <h4>Hospitality and Tourism</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-buildings"></i></div>
+                    <h4>Real Estate and Construction</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-heart-pulse"></i></div>
+                    <h4>Healthcare and Pharma</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-fuel-pump"></i></div>
+                    <h4>Energy and Oil/Gas</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-truck"></i></div>
+                    <h4>Logistics and Ports</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-film"></i></div>
+                    <h4>Entertainment and Media</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-book"></i></div>
+                    <h4>Education</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-motherboard"></i></div>
+                    <h4>Semiconductors and Data Centers</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-wrap">
+        <div class="text-center mb-30" data-aos="fade-in">
+            <h2 class="gradient-text" style="font-size: 28px;">Trusted by leading organizations globally</h2>
+        </div>
+        <div class="marquee" data-aos="fade-in">
+            <img src="img/Mercedes-Benz.svg" alt="Mercedes-Benz">
+            <img src="img/Ford.svg" alt="Ford">
+            <img src="img/Deutsche-Bank.svg" alt="Deutsche Bank">
+            <img src="img/HSBC.svg" alt="HSBC">
+            <img src="img/Koch-Industries.svg" alt="Koch Industries">
+            
+            <img src="img/Mercedes-Benz.svg" alt="Mercedes-Benz">
+            <img src="img/Ford.svg" alt="Ford">
+            <img src="img/Deutsche-Bank.svg" alt="Deutsche Bank">
+            <img src="img/HSBC.svg" alt="HSBC">
+            <img src="img/Koch-Industries.svg" alt="Koch Industries">
+        </div>
+    </div>
+
+    <section class="section section-alt" >
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(247,247,247,0.92); z-index: 0;"></div>
+        <div class="container text-center" style="position: relative; z-index: 1;">
+            <h2 class="gradient-text" data-aos="fade-in" style="padding-bottom: 15px;">Awards and recognitions</h2>
+            
+            <div class="swiper init-swiper awards-swiper" style="margin-top: 40px; padding-bottom: 40px !important;">
+                <script type="application/json" class="swiper-config">
+                    { "loop": true, "speed": 1000, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 20, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 3, "spaceBetween": 30 } } }
+                </script>
+                <div class="swiper-wrapper align-items-stretch">
+                    <div class="swiper-slide">
+                        <div class="glass-card w-100" data-aos="fade-in" data-aos-delay="100">
+                            <img src="img/GPTW_2026-2027_Logo_SVG.webp" alt="Great Place To Work" style="object-fit: contain; background: rgba(255,255,255,0.8); padding: 20px;">
+                            <div class="glass-card-content">
+                                <h4 style="color: #06325E; font-size: 18px;">Great Place to Work®</h4>
+                                <p style="font-size: 15px; margin: 0; color: #333;">Certified organization</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="glass-card w-100" data-aos="fade-in" data-aos-delay="200">
+                            <img src="img/LinkedIn_Talent_2025-Finalist.webp" alt="LinkedIn Talent Awards" style="object-fit: contain; background: rgba(255,255,255,0.8); padding: 20px;">
+                            <div class="glass-card-content">
+                                <h4 style="color: #06325E; font-size: 18px;">LinkedIn Talent Awards</h4>
+                                <p style="font-size: 15px; margin: 0; color: #333;">Finalist 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="glass-card w-100" data-aos="fade-in" data-aos-delay="300">
+                            <img src="img/ISO27001_2013_GDPR_Certified_Company.webp" alt="ISO Compliant" style="object-fit: contain; background: rgba(255,255,255,0.8); padding: 20px;">
+                            <div class="glass-card-content">
+                                <h4 style="color: #06325E; font-size: 18px;">ISO 27001 certified and GDPR compliant</h4>
+                                <p style="font-size: 15px; margin: 0; color: #333;">Industry-leading security standards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="success-stories">
+        <div class="container">
+            <h2 class="text-center mb-30 gradient-text" style="display: block;" data-aos="fade-in">Success Stories</h2>
+            
+            <div class="tabs-container" data-aos="fade-in" data-aos-delay="100">
+                <button class="custom-tab-btn active" data-tab="tab-me">Middle East</button>
+                <button class="custom-tab-btn" data-tab="tab-global">Global </button>
+                <button class="custom-tab-btn" data-tab="tab-india">India</button>
+            </div>
+
+            <button class="mobile-accordion-btn active" data-tab="tab-me">Middle East <i class="bi bi-chevron-down"></i></button>
+            <div class="tab-content active" id="tab-me" data-aos="fade-in" data-aos-delay="200">
+                <div class="swiper init-swiper mb-30 text-left">
+                    <script type="application/json" class="swiper-config">
+                        { "loop": true, "speed": 1000, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 20, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 3, "spaceBetween": 30 } } }
+                    </script>
+                    <div class="swiper-wrapper py-2 align-items-stretch">
+                        <div class="swiper-slide">
+                            <a href="#cs-me-1" data-modal="cs-me-1" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/Tech-Scaling.webp" alt="Newgen Tech Teams" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A leading digital solutions provider built tech teams in Saudi Arabia for their India delivery center</p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#cs-me-2" data-modal="cs-me-2" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/AI-and-robotics.webp" alt="AI Startup GCC" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">An AI and robotics startup expanding in the UAE (HQ Dubai) scaled key talent hiring</p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#cs-me-3" data-modal="cs-me-3" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/Hiring-Efficiency.webp" alt="Retailer Hiring" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A leading regional retailer improved hiring turnaround time with interview-as-a-service (IaaS) support (Sharaf DG)</p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <button class="mobile-accordion-btn" data-tab="tab-global">Global Markets <i class="bi bi-chevron-down"></i></button>
+            <div class="tab-content" id="tab-global">
+                <div class="swiper init-swiper mb-30 text-left">
+                    <script type="application/json" class="swiper-config">
+                        { "loop": true, "speed": 1000, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 20, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 3, "spaceBetween": 30 } } }
+                    </script>
+                    <div class="swiper-wrapper py-2 align-items-stretch">
+                        <div class="swiper-slide">
+                            <a href="#cs-koch" data-modal="cs-koch" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/GCC-Setup.webp" alt="Koch GCC" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+                                  
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A US-headquartered conglomerate set up their Global Capability Center in India</p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#cs-microsoft" data-modal="cs-microsoft" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/TA-Operations.webp" alt="Microsoft TA" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+                                    
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A US-based global tech leader streamlined its TA operations </p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#cs-moe" data-modal="cs-moe" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/Assessments.webp" alt="MoE Indonesia" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">The MoE, Indonesia, secured national-scale teacher assessments with Pearson integration</p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <button class="mobile-accordion-btn" data-tab="tab-india">India <i class="bi bi-chevron-down"></i></button>
+            <div class="tab-content" id="tab-india">
+                <div class="swiper init-swiper mb-30 text-left">
+                    <script type="application/json" class="swiper-config">
+                        { "loop": true, "speed": 1000, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 20, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 3, "spaceBetween": 30 } } }
+                    </script>
+                    <div class="swiper-wrapper py-2 align-items-stretch">
+                        <div class="swiper-slide">
+                            <a href="#cs-debt" data-modal="cs-debt" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/Fin-Tech.webp" alt="Debt Lifecycle" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">The world’s only end-to-end debt lifecycle platform scaled tech hiring across key Indian metros</p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#cs-elearning" data-modal="cs-elearning" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/Ed-Tech.webp" alt="E-learning Tech" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A tech-first e-learning company drove high-impact tech hiring</p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#cs-sports" data-modal="cs-sports" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/Global-leader-in-sports-and-entertainment-tech.webp" alt="Sports Tech" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A global leader in sports and entertainment tech built a high-caliber engineering team</p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#cs-fashion" data-modal="cs-fashion" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
+                                <img src="img/Tech-Hiring.webp" alt="Fashion Ecom" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">India’s leading fashion e-commerce company scaled tech hiring across multiple functions and seniority levels</p>
+                                    <span class="read-more-text">Read More</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <section id="testimonials" class="section" style="background: #eef5f9;">
+        <div class="container text-center" data-aos="fade-in">
+            <h2 class="gradient-text mb-5">What our customers say</h2>
+            <div class="swiper init-swiper testimonial-swiper">
+                <script type="application/json" class="swiper-config">
+                    { "loop": true, "speed": 1000, "autoplay": { "delay": 5000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 30, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 2, "spaceBetween": 30 } } }
+                </script>
+                <div class="swiper-wrapper align-items-stretch">
+                    <div class="swiper-slide">
+                        <div class="card mx-auto h-100" style="padding: 40px; border-radius: 20px; background: var(--premium-gradient); border: none; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                            <i class="bi bi-quote fs-1 text-warning opacity-75 mb-3 d-block"></i>
+                            <p class="fs-6 fst-italic mb-4 flex-grow-1 text-white">"Careernet has been instrumental in scaling our regional teams. Their deep understanding of the Middle East market and efficient RPO models have significantly reduced our time-to-hire while maintaining high candidate quality."</p>
+                            <h5 class="mb-0 text-warning">Royal Group</h5>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card mx-auto h-100" style="padding: 40px; border-radius: 20px; background: var(--premium-gradient); border: none; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                            <i class="bi bi-quote fs-1 text-warning opacity-75 mb-3 d-block"></i>
+                            <p class="fs-6 fst-italic mb-4 flex-grow-1 text-white">"The professionalism and reach of Careernet across India and the UAE allowed us to build our tech center seamlessly. They are a true strategic partner who understands the complexities of cross-border hiring."</p>
+                            <h5 class="mb-0 text-warning">Infovision Information</h5>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section-gradient" style="position: relative; overflow: hidden; padding-bottom: 0;">
+        <div class="container" data-aos="fade-in" style="max-width: 1000px;">
+            <div class="text-center mb-4">
+                <h2 style="color: white;">Connect with us</h2>
+            </div>
+            <div class="contact-form-wrapper" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.2); padding: 50px 40px; margin-bottom: 50px;">
+                <div class="contact-tabs-container">
+                    <button class="contact-tab-btn active" data-target="contact-corporate">Corporates</button>
+                    <button class="contact-tab-btn" data-target="contact-candidate">Candidates</button>
+                </div>
+
+                <div id="contact-corporate" class="contact-tab-content active">
+                    <form action="process_form.php" method="POST" class="ajax-form">
+                        <input type="hidden" name="form_type" value="contact_corporate">
+                        <div class="grid grid-2" style="gap: 15px;">
+                            <input type="text" name="Name" class="form-control" placeholder="Name*" required style="margin-bottom: 0;">
+                            <div style="display: flex; gap: 8px;">
+                                <div class="country-code-wrapper" style="position: relative; width: 110px; flex-shrink: 0;">
+                                    <select class="form-control country-select" name="Country_Code" style="padding-left: 35px; padding-right: 10px; margin-bottom: 0; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%225%22%20viewBox%3D%220%200%2010%205%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%200l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 10px top 50%; background-size: 8px 4px; cursor: pointer;">
+                                        <option value="+971" data-flag="ae">+971</option>
+                                        <option value="+91" data-flag="in">+91</option>
+                                        <option value="+1" data-flag="us">+1</option>
+                                        <option value="+44" data-flag="gb">+44</option>
+                                        <option value="+966" data-flag="sa">+966</option>
+                                        <option value="+974" data-flag="qa">+974</option>
+                                        <option value="+973" data-flag="bh">+973</option>
+                                        <option value="other" data-flag="other">Other</option>
+                                    </select>
+                                    <img src="https://flagcdn.com/w20/ae.png" alt="Flag" class="selected-flag" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 18px; pointer-events: none; border-radius: 2px;">
+                                </div>
+                                <input type="text" name="Custom_Country_Code" class="form-control country-code-input" placeholder="Code*" style="width: 80px; flex-shrink: 0; margin-bottom: 0;">
+                                <input type="tel" name="Phone" class="form-control" placeholder="Phone Number*" required style="margin-bottom: 0; flex-grow: 1;" pattern="^[0-9\-\+\s\(\)]+$" title="Please enter a valid phone number">
+                            </div>
+                        </div>
+                        <div class="grid grid-2" style="gap: 15px; margin-top: 15px;">
+                            <input type="email" name="Email" class="form-control" placeholder="Email*" required style="margin-bottom: 0;">
+                            <input type="text" name="Company_Name" class="form-control" placeholder="Company Name*" required style="margin-bottom: 0;">
+                        </div>
+                        <textarea name="Message" class="form-control" placeholder="Message" rows="3" style="resize: none; margin-top: 15px;"></textarea>
+                        <div style="text-align: center; margin-top: 10px;">
+                            <button type="submit" class="btn btn-secondary btn-animate" style="width: auto; padding: 14px 40px;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="contact-candidate" class="contact-tab-content">
+                    <form action="process_form.php" method="POST" enctype="multipart/form-data" class="ajax-form">
+                        <input type="hidden" name="form_type" value="contact_candidate">
+                        <div class="grid grid-2" style="gap: 15px;">
+                            <input type="text" name="First_Name" class="form-control" placeholder="First Name*" required style="margin-bottom: 0;">
+                            <input type="text" name="Last_Name" class="form-control" placeholder="Last Name*" required style="margin-bottom: 0;">
+                        </div>
+                        <div class="grid grid-2" style="gap: 15px; margin-top: 15px;">
+                            <input type="email" name="Email" class="form-control" placeholder="Email Address*" required style="margin-bottom: 0;">
+                            <div style="display: flex; gap: 8px;">
+                                <div class="country-code-wrapper" style="position: relative; width: 110px; flex-shrink: 0;">
+                                    <select class="form-control country-select" name="Country_Code" style="padding-left: 35px; padding-right: 10px; margin-bottom: 0; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%225%22%20viewBox%3D%220%200%2010%205%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%200l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 10px top 50%; background-size: 8px 4px; cursor: pointer;">
+                                        <option value="+971" data-flag="ae">+971</option>
+                                        <option value="+91" data-flag="in">+91</option>
+                                        <option value="+1" data-flag="us">+1</option>
+                                        <option value="+44" data-flag="gb">+44</option>
+                                        <option value="+966" data-flag="sa">+966</option>
+                                        <option value="+974" data-flag="qa">+974</option>
+                                        <option value="+973" data-flag="bh">+973</option>
+                                        <option value="other" data-flag="other">Other</option>
+                                    </select>
+                                    <img src="https://flagcdn.com/w20/ae.png" alt="Flag" class="selected-flag" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 18px; pointer-events: none; border-radius: 2px;">
+                                </div>
+                                <input type="text" name="Custom_Country_Code" class="form-control country-code-input" placeholder="Code*" style="width: 80px; flex-shrink: 0; margin-bottom: 0;">
+                                <input type="tel" name="Phone" class="form-control" placeholder="Phone Number*" required style="margin-bottom: 0; flex-grow: 1;" pattern="^[0-9\-\+\s\(\)]+$" title="Please enter a valid phone number">
+                            </div>
+                        </div>
+                        <input type="url" name="LinkedIn_URL" class="form-control" placeholder="LinkedIn Profile URL" style="margin-top: 15px;" pattern="^https?:\/\/(www\.)?linkedin\.com\/.*$" title="Please enter a valid LinkedIn URL starting with http:// or https://">
+                        <div style="background: var(--light-grey); padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px dashed var(--primary-blue);">
+                            <label style="font-size: 14px; font-weight: 700; color: var(--dark-blue); display: block; margin-bottom: 8px;">Upload Resume / CV (PDF or DOC)*</label>
+                            <input type="file" name="Resume" required style="width: 100%; font-size: 14px;" accept=".pdf,.doc,.docx">
+                        </div>
+                        <div style="text-align: center; margin-top: 10px;">
+                            <button type="submit" class="btn btn-primary btn-animate" style="width: auto; padding: 14px 40px;">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white modern-footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row gy-4 justify-content-between">
+                    <div class="col-lg-3 pe-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <img src="img/CN_Logo_Color_in_Dark_BG.svg" alt="Careernet" height="40" class="mb-4">
+                        <p class="text-white opacity-75 small">Making holistic talent solutions happen in the Middle East. Optimizing sourcing, assessing, and hiring of early-career to CXO talent worldwide.</p>
+                        <div class="mt-4">
+                            <div class="d-flex gap-3 mt-3 social-links">
+                                <a href="https://www.instagram.com/careernetconsulting/" target="_blank"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/careernet-consulting" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://www.youtube.com/channel/UCcZeB6yJjvS4LlL1cO3KL-g" target="_blank"><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                        <h5 class="text-white mb-4 fs-6 text-uppercase" style="letter-spacing: 1px;">Quick Links</h5>
+                        <ul class="list-unstyled d-flex flex-column gap-3 small">
+                            <li><a href="#about" class="text-white opacity-75 text-decoration-none transition">About Us</a></li>
+                            <li><a href="#solutions" class="text-white opacity-75 text-decoration-none transition">Solutions</a></li>
+                            <li><a href="#expertise" class="text-white opacity-75 text-decoration-none transition">Expertise</a></li>
+                            <li><a href="#success-stories" class="text-white opacity-75 text-decoration-none transition">Success Stories</a></li>
+                            <li><a href="#testimonials" class="text-white opacity-75 text-decoration-none transition">Testimonials</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                        <h5 class="text-white mb-4 fs-6 text-uppercase" style="letter-spacing: 1px;">Our Brands</h5>
+                        <ul class="list-unstyled d-flex flex-column gap-3 small mb-4">
+                            <li><a href="#modal-brand-1" class="popup-trigger text-white opacity-75 text-decoration-none transition">Careernet</a></li>
+                            <li><a href="#modal-brand-3" class="popup-trigger text-white opacity-75 text-decoration-none transition">HirePro</a></li>
+                            <li><a href="#modal-brand-2" class="popup-trigger text-white opacity-75 text-decoration-none transition">Longhouse</a></li>
+                            <li><a href="#modal-brand-4" class="popup-trigger text-white opacity-75 text-decoration-none transition">MyCareernet</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                        <h5 class="text-white mb-4 fs-6 text-uppercase" style="letter-spacing: 1px;">Contact Us</h5>
+                        <ul class="list-unstyled d-flex flex-column gap-3 small opacity-75 text-white">
+                            <li class="d-flex align-items-start"><i class="bi bi-envelope me-2 text-warning mt-1"></i> <a href="mailto:sales@careernet.ae" class="contact-link text-white">sales@careernet.ae</a></li>
+                            <li class="d-flex align-items-start"><i class="bi bi-telephone me-2 text-warning mt-1"></i> <a href="tel:+97148369591" class="contact-link text-white">+971 4 836 9591</a></li>
+                            <li class="d-flex align-items-start"><i class="bi bi-geo-alt me-2 text-warning mt-1"></i> Meydan Grandstand, 6th Floor, Dubai, U.A.E.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom text-center" style="padding-bottom: 20px;">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-center gap-4 mb-3" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#modal-privacy" class="popup-trigger text-white opacity-75 text-decoration-none small transition hover-white">Privacy Policy</a>
+                    <a href="#modal-cookies" class="popup-trigger text-white opacity-75 text-decoration-none small transition hover-white">Cookies Policy</a>
+                    <a href="#modal-terms" class="popup-trigger text-white opacity-75 text-decoration-none small transition hover-white">Terms of Service</a>
+                </div>
+                <p class="opacity-100 small mb-0 text-white" data-aos="fade-up" data-aos-delay="200">© <span id="dynamicYear"></span> Careernet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modals-container">
+        
+        <div class="modal-overlay" id="modal-thank-you">
+            <div class="modal-box" style="text-align: center; max-width: 500px;">
+                <button class="modal-close">×</button>
+                <div style="font-size: 60px; color: #27c93f; margin-bottom: 20px;"><i class="bi bi-check-circle-fill"></i></div>
+                <h3 class="gradient-text" style="display: block; margin-bottom: 15px; font-size: 28px;">Thank You!</h3>
+                <p style="font-size: 16px; color: #555; margin-bottom: 0;">Your details have been successfully submitted. Our team will get back to you shortly.</p>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-hire">
+            <div class="modal-box modal-box-form">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 10px; font-size: 28px;">Hire Great Talent</h3>
+                <p style="font-size: 15px; margin-bottom: 25px; color: #555; text-align: center;">Provide your details below to discuss your talent acquisition needs.</p>
+                <form action="process_form.php" method="POST" class="ajax-form" id="hireForm">
+                    <input type="hidden" name="form_type" value="hire">
+                    <div class="grid grid-2" style="gap: 15px;">
+                        <input type="text" name="Name" class="form-control" placeholder="Name*" required style="margin-bottom: 0;">
+                        <div style="display: flex; gap: 8px;">
+                            <div class="country-code-wrapper" style="position: relative; width: 110px; flex-shrink: 0;">
+                                <select class="form-control country-select" name="Country_Code" style="padding-left: 35px; padding-right: 10px; margin-bottom: 0; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%225%22%20viewBox%3D%220%200%2010%205%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%200l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 10px top 50%; background-size: 8px 4px; cursor: pointer;">
+                                    <option value="+971" data-flag="ae">+971</option>
+                                    <option value="+91" data-flag="in">+91</option>
+                                    <option value="+1" data-flag="us">+1</option>
+                                    <option value="+44" data-flag="gb">+44</option>
+                                    <option value="+966" data-flag="sa">+966</option>
+                                    <option value="+974" data-flag="qa">+974</option>
+                                    <option value="+973" data-flag="bh">+973</option>
+                                    <option value="other" data-flag="other">Other</option>
+                                </select>
+                                <img src="https://flagcdn.com/w20/ae.png" alt="Flag" class="selected-flag" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 18px; pointer-events: none; border-radius: 2px;">
+                            </div>
+                            <input type="text" name="Custom_Country_Code" class="form-control country-code-input" placeholder="Code*" style="width: 80px; flex-shrink: 0; margin-bottom: 0;">
+                            <input type="tel" name="Phone" class="form-control" placeholder="Phone Number*" required style="margin-bottom: 0; flex-grow: 1;" pattern="^[0-9\-\+\s\(\)]+$" title="Please enter a valid phone number">
+                        </div>
+                    </div>
+                    <div class="grid grid-2" style="gap: 15px; margin-top: 15px;">
+                        <input type="email" name="Email" class="form-control" placeholder="Email*" required style="margin-bottom: 0;">
+                        <input type="text" name="Company_Name" class="form-control" placeholder="Company Name*" required style="margin-bottom: 0;">
+                    </div>
+                    <textarea name="Message" class="form-control" placeholder="Message" rows="4" style="resize: none; margin-top: 15px;"></textarea>
+                    
+                    <div style="text-align: center; margin-top: 10px;">
+                        <button type="submit" class="btn btn-secondary btn-animate" style="width: auto; padding: 14px 40px;">Submit Inquiry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-cv">
+            <div class="modal-box modal-box-form">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 10px; font-size: 28px;">Submit Your CV</h3>
+                <p style="font-size: 15px; margin-bottom: 25px; color: #555; text-align: center;">Take the next step in your career. Submit your profile for upcoming opportunities.</p>
+                <form action="process_form.php" method="POST" enctype="multipart/form-data" class="ajax-form" id="cvForm">
+                    <input type="hidden" name="form_type" value="cv">
+                    <div class="grid grid-2" style="gap: 15px;">
+                        <input type="text" name="First_Name" class="form-control" placeholder="First Name*" required style="margin-bottom: 0;">
+                        <input type="text" name="Last_Name" class="form-control" placeholder="Last Name*" required style="margin-bottom: 0;">
+                    </div>
+                    <input type="email" name="Email" class="form-control" placeholder="Email Address*" required style="margin-top: 15px;">
+                    
+                    <div style="display: flex; gap: 8px; margin-top: 15px;">
+                        <div class="country-code-wrapper" style="position: relative; width: 110px; flex-shrink: 0;">
+                            <select class="form-control country-select" name="Country_Code" style="padding-left: 35px; padding-right: 10px; margin-bottom: 0; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%225%22%20viewBox%3D%220%200%2010%205%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%200l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 10px top 50%; background-size: 8px 4px; cursor: pointer;">
+                                <option value="+971" data-flag="ae">+971</option>
+                                <option value="+91" data-flag="in">+91</option>
+                                <option value="+1" data-flag="us">+1</option>
+                                <option value="+44" data-flag="gb">+44</option>
+                                <option value="+966" data-flag="sa">+966</option>
+                                <option value="+974" data-flag="qa">+974</option>
+                                <option value="+973" data-flag="bh">+973</option>
+                                <option value="other" data-flag="other">Other</option>
+                            </select>
+                            <img src="https://flagcdn.com/w20/ae.png" alt="Flag" class="selected-flag" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 18px; pointer-events: none; border-radius: 2px;">
+                        </div>
+                        <input type="text" name="Custom_Country_Code" class="form-control country-code-input" placeholder="Code*" style="width: 80px; flex-shrink: 0; margin-bottom: 0;">
+                        <input type="tel" name="Phone" class="form-control" placeholder="Phone Number*" required style="margin-bottom: 0; flex-grow: 1;" pattern="^[0-9\-\+\s\(\)]+$" title="Please enter a valid phone number">
+                    </div>
+                    
+                    <input type="url" name="LinkedIn_URL" class="form-control" placeholder="LinkedIn Profile URL" style="margin-top: 15px;" pattern="^https?:\/\/(www\.)?linkedin\.com\/.*$" title="Please enter a valid LinkedIn URL starting with http:// or https://">
+                    <div style="background: var(--light-grey); padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px dashed var(--primary-blue);">
+                        <label style="font-size: 14px; font-weight: 700; color: var(--dark-blue); display: block; margin-bottom: 8px;">Upload Resume / CV (PDF or DOC)*</label>
+                        <input type="file" name="Resume" required style="width: 100%; font-size: 14px;" accept=".pdf,.doc,.docx">
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 10px;">
+                        <button type="submit" class="btn btn-primary btn-animate" style="width: auto; padding: 14px 40px;">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-brand-1">
+            <div class="modal-box modal-box-form">
+                <button class="modal-close">×</button>
+                <img src="img/CN_Logo_Color_Light_BG.svg" alt="Careernet" style="height: 40px; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto;">
+                <h4 class="text-center mb-4" style="color: var(--dark-blue);">We are Careernet</h4>
+                
+                <div class="cs-section text-left">
+                    <p>Because the world needs great talent, we make it happen with the unified strength of Careernet, HirePro, Longhouse, and MyCareernet.</p>
+                    <p>Careernet is India’s leading holistic talent solutions provider. As your trusted partner, we shape exceptional teams with scalable, holistic talent solutions while helping candidates realise their dream careers.</p>
+                    <p>Whether you’re a global employer entering India, an emerging startup, or a large enterprise scaling operations, we place your talent needs at the heart of everything we do, ensuring you find exactly what you’re looking for.</p>
+                    <p>From identifying passionate individuals to building entire teams, we excel in helping organisations discover the best talent. We support businesses in exploring new markets, launching operations, and driving growth.</p>
+                    <p>With an expansive network of 1,000+ top employers and over 800,000 successful placements, we offer unparalleled expertise across industries and levels.</p>
+                    <p>Since 1999, we’ve empowered organisations and candidates alike. Together with our group brands — HirePro, Longhouse, and MyCareernet — we make dream careers and great teams happen for our clients, and candidates.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-overlay" id="modal-brand-2">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <img src="img/LH-Logo-without-by-line.svg" alt="Longhouse" style="height: 40px; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto;">
+                <h4 class="text-center mb-4" style="color: var(--dark-blue);">Executive search and leadership advisory</h4>
+                
+                <div class="cs-section text-left">
+                    <p>Longhouse is the Executive Search Partner enabling organisations and leaders to scale and transform. With a deep understanding of the talent landscape in high-growth digital sectors, emerging technologies, and the consumer internet space, we are your trusted partner for sourcing the right talent that delivers both today and is future-ready. The world needs great talent, we make it happen with the unified strengths of Careernet, HirePro, Longhouse and MyCareernet.</p>
+                    <p>We are honoured to be long-term partners with leading ventures, from their early stages to their current positions of strength. Over the years, we’ve helped these companies hire critical talent, adapting to the changing needs of their businesses and markets.</p>
+                    <p>In today’s dynamic and competitive environment, attracting and retaining the right talent for key leadership positions is more important than ever. We bring an unparalleled combination of world-class processes, agility, and a deep understanding of the talent landscape to deliver the right success model for each client.</p>
+                    <p>Backed by the unified strength of Careernet, HirePro, Longhouse and MyCareernet, we make dream careers and great teams happen for our clients and candidates.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-overlay" id="modal-brand-3">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <img src="img/HirePro_Full-color.svg" alt="HirePro" style="height: 40px; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto;">
+                <h4 class="text-center mb-4" style="color: var(--dark-blue);">Growing Fearless Over the Years</h4>
+                
+                <div class="cs-section text-left">
+                    <p>Because the world needs great talent, we make it happen with the unified strengths of Careernet, HirePro, Longhouse and MyCareernet.</p>
+                    <p>At HirePro, Fearless Hiring is at the heart of everything we do. As part of Careernet, our mission is to make the unpredictable world of hiring predictable with our profound expertise, AI-powered technology and impeccable service. Our unwavering pursuit of excellence, powered by cutting-edge technology and a committed team, enables us to help clients recruit top-tier talent and build exceptional teams.</p>
+                    <p>Our product, technology, and services teams embody a fearless dedication to automation and eliminating challenges at every stage of the hiring journey.</p>
+                    <p>Our fearless journey began over two decades ago when our founders, Anshuman Das and Rishi Das, identified a significant gap in the fragmented professional assessment and recruitment landscape.</p>
+                    <p>Today, HirePro stands tall as an AI-powered recruitment platform — a global beacon of Fearless Hiring. Backed by the unified strength of Careernet, Longhouse and MyCareernet, we empower organisations to navigate every phase of the recruitment supply chain fearlessly. From sourcing and screening to selection and onboarding, we deliver seamless, automated recruitment experiences that break down barriers and eliminate challenges at every step.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-overlay" id="modal-brand-4">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <img src="img/MYCN_Color_Without_Byline.svg" alt="MyCareernet" style="height: 40px; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto;">
+                <h4 class="text-center mb-4" style="color: var(--dark-blue);">Employer branding and talent community engagement</h4>
+                
+                <div class="cs-section text-left">
+                    <p>MyCareernet is your ultimate partner for employer branding and talent community engagement. We focus on elevating your brand presence across early-career and leadership professionals alike.</p>
+                    <p>We provide exclusive access to high-quality talent pools across key markets and craft custom messaging campaigns that resonate during your expansion, localization, and cross-border hiring initiatives.</p>
+                    <p>Because the world needs great talent, we make it happen with the unified strength of Careernet, HirePro, Longhouse, and MyCareernet. Together, we ensure your organization remains top-of-mind for the best candidates across the globe.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-me-1">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Newgen</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Rapidly build a Saudized workforce across KSA</li>
+                        <li>Tech and non-tech hiring within tight timelines</li>
+                        <li>Sourcing qualified local talent at scale</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Focused Saudization hiring strategy</li>
+                        <li>Local talent networks for faster sourcing and closures</li>
+                        <li>Streamlined recruitment processes to improve TAT</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>A Saudized workforce built in a short span</li>
+                        <li>High-quality hires across tech and business functions</li>
+                        <li>Faster workforce localization and business expansion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-me-2">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: AI Startup UAE</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Rapidly build a specialized AI & Robotics talent pool</li>
+                        <li>Create strong employer brand awareness in a new region</li>
+                        <li>Maintain strict quality controls for high-stakes roles</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Executed targeted talent mapping and competitive landscaping</li>
+                        <li>Implemented an agile, dedicated RPO delivery team</li>
+                        <li>Enhanced candidate engagement through tailored campaigns</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>Successfully scaled engineering teams ahead of schedule</li>
+                        <li>Achieved high candidate retention and satisfaction rates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-me-3">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Sharaf DG</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Handle high-volume retail hiring without compromising quality</li>
+                        <li>Reduce the administrative burden on internal hiring managers</li>
+                        <li>Standardize candidate screening processes</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Integrated our seamless Interview-as-a-Service (IaaS) offering</li>
+                        <li>Deployed structured, automated initial screening rounds</li>
+                        <li>Provided real-time analytics and candidate progress tracking</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>Significantly improved overall hiring turnaround time</li>
+                        <li>Freed up core business leaders to focus on strategic growth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-overlay" id="cs-koch">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: US-headquartered conglomerate</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Establish a global tech centre in Bangalore</li>
+                        <li>Build brand awareness among tech talent</li>
+                        <li>Enable flexible, high-volume hiring</li>
+                        <li>Compete with established competitors for top talent</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Consultative talent mapping, sourcing, and screening</li>
+                        <li>Hiring process design, including frameworks</li>
+                        <li>Employer branding campaigns</li>
+                        <li>SLA- and KPI-led governance</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>India center established within a year</li>
+                        <li>Team scaled from 2 to 900</li>
+                        <li>Strong talent pipeline and employer brand built</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-microsoft">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Globally leading US tech MNC</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Scale hiring to 8,000 annually</li>
+                        <li>Single-partner TA outsourcing</li>
+                        <li>Consistent, high-quality interviews</li>
+                        <li>Improve efficiency at pan-India scale</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>End-to-end TA management</li>
+                        <li>On-ground + centralized teams</li>
+                        <li>Scaled interview coordination</li>
+                        <li>Candidate logistics</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>60,000+ interviews → 8,000+ offers</li>
+                        <li>12–15% YoY hiring growth</li>
+                        <li>20–25% higher processing capacity</li>
+                        <li>Centralized hiring data and insights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-moe">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: MoE, Indonesia</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Fraud-proof assessments at national scale</li>
+                        <li>Secure evaluation of 180,000 candidates</li>
+                        <li>Fully remote, low-friction access</li>
+                        <li>Faster, audit-ready execution</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>AI-based identity verification and monitoring</li>
+                        <li>Integration with Pearson’s Versant</li>
+                        <li>Rapid deployment with minimal setup</li>
+                        <li>Real-time reporting and 24×7 support</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>20,000+ assessed in 6 months</li>
+                        <li>90%+ faster cycles</li>
+                        <li>90%+ cost efficiency vs in-person</li>
+                        <li>Scalable foundation for 180,000 by 2027</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-debt">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: End-to-end debt lifecycle platform</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Hire 100 tech professionals in 6 months (Bengaluru, Chennai)</li>
+                        <li>Source across consumer internet, enterprise tech, startups</li>
+                        <li>Roles: Backend, Frontend, QA, Data Science (SE to EM)</li>
+                        <li>High demand, low conversions, poor join rates</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>RPO model with onsite + backend recruiters</li>
+                        <li>Calibrated requirements with hiring managers</li>
+                        <li>Weekend drives, weekly reviews, candidate–manager connects</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>110 offers, 45 onboardings in 7–8 months</li>
+                        <li>Stronger hiring structure, high client satisfaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-elearning">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Tech-first e-learning company</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Build a 50-member tech team (no TA team)</li>
+                        <li>Source from consumer internet, deep tech, startups</li>
+                        <li>Roles across engineering, data, product, and program</li>
+                        <li>High demand, low brand awareness, underperforming RPO</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>6-month RPO partnership</li>
+                        <li>On-site lead, account manager, and sourcing team</li>
+                        <li>Salary benchmarking and level mapping</li>
+                        <li>Weekend drives, weekly reviews, candidate–manager connects</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>40 offers, 23 onboardings in 7–8 months</li>
+                        <li>Recruitment process set up, strong client satisfaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-sports">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Global leader in sports and entertainment tech</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Build a high-potential tech team in Mumbai</li>
+                        <li>Limited local tech talent</li>
+                        <li>Interview constraints across time zones</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Targeted sourcing from product companies</li>
+                        <li>Focus on Mumbai-based candidates</li>
+                        <li>Flexible interview scheduling</li>
+                        <li>Candidate–manager engagement to boost conversions</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>~30 engineers hired within timelines</li>
+                        <li>60%+ joining ratio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-fashion">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Leading fashion e-commerce company</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Fill 80–100 roles in 6–7 months</li>
+                        <li>Hire top talent from e-commerce and scaled startups</li>
+                        <li>Roles across engineering, data, and DevOps (SE to Architect)</li>
+                        <li>Process delays, no onsite TA support</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>RPO model with onsite + backend team</li>
+                        <li>Dedicated recruiter pod</li>
+                        <li>Stakeholder coordination and process gap closure</li>
+                        <li>Tech network sourcing, weekend drives, post-offer engagement</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>105 offers with 70 onboardings in 7–8 months</li>
+                        <li>70% reduction in time-to-hire</li>
+                        <li>All roles closed, targets exceeded</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-cookie-settings">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text text-center mb-3">Manage Cookie Settings</h3>
+                <div class="cs-section">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                        <strong>Strictly Necessary Cookies</strong>
+                        <span style="color: var(--primary-blue);">Always Active</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                        <strong>Analytics Cookies</strong>
+                        <input type="checkbox" checked>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                        <strong>Marketing Cookies</strong>
+                        <input type="checkbox" checked>
+                    </div>
+                    <button class="btn btn-primary mt-3 w-100 modal-close-btn" style="border-radius: 8px;">Save Preferences</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-cookies">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Cookies Policy</h3>
+                <div class="cs-section">
+                    <p>This Cookies Policy explains how Careernet uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>
+                    <p>We use strictly necessary cookies to make our site work securely and properly. We also use optional cookies (analytics, performance, and advertising) to improve your experience and deliver relevant content. You can manage your preferences at any time to opt-in or opt-out in compliance with GDPR guidelines.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-overlay" id="modal-privacy">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Privacy Policy</h3>
+                <div class="cs-section">
+                    <p><strong>1. Information Collection:</strong> We collect personal information (like name, email, phone number, and CVs) when you submit forms or apply for jobs on our site. This is used solely for recruitment and business communication purposes.</p>
+                    <p><strong>2. Data Protection & GDPR:</strong> We comply with UAE data protection laws and GDPR guidelines. Your data is stored securely and never sold to third parties. You have the right to access, rectify, or erase your personal data.</p>
+                    <p><strong>3. Third-Party Sharing:</strong> Data may be shared with trusted clients for recruitment purposes only, with your explicit consent.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-overlay" id="modal-terms">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Terms of Service</h3>
+                <div class="cs-section">
+                    <p><strong>1. Acceptance of Terms:</strong> By accessing this website, you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance.</p>
+                    <p><strong>2. Service Description:</strong> Careernet provides talent solutions, recruitment, and employer branding services. The information on this site is for general informational purposes.</p>
+                    <p><strong>3. User Conduct:</strong> You agree not to use the website for any unlawful purpose or in any way that could damage, disable, or impair the site.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Initialization: AOS Animations
+            AOS.init({ duration: 1500, easing: 'ease-in-out', once: true, offset: 30 });
+
+            // Stats Counters
+            const counters = document.querySelectorAll('.counter');
+            const counterObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        let count = 0;
+                        const updateCount = () => {
+                            const increment = target / 50;
+                            if (count < target) { count += increment; counter.innerText = Math.ceil(count); setTimeout(updateCount, 30); } 
+                            else { counter.innerText = target; }
+                        };
+                        updateCount();
+                        counterObserver.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(counter => { counterObserver.observe(counter); });
+
+            // Navigation Toggle
+            const toggle = document.getElementById('mobileToggle');
+            const menu = document.getElementById('navMenu');
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('active');
+                menu.classList.toggle('active');
+                document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Mobile Dropdown Fix
+            const langDropBtn = document.getElementById('langDropBtn');
+            if(langDropBtn) {
+                langDropBtn.addEventListener('click', (e) => {
+                    if(window.innerWidth < 992) {
+                        e.preventDefault();
+                        langDropBtn.parentElement.classList.toggle('active');
+                    }
+                });
+            }
+
+            // Navbar Scroll Effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if(window.scrollY > 50) {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                    navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.05)';
+                    navbar.style.padding = '10px 0';
+                } else {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                    navbar.style.boxShadow = 'none';
+                    navbar.style.padding = '15px 0';
+                }
+            });
+
+            // AJAX Form Submission
+            const ajaxForms = document.querySelectorAll('.ajax-form');
+            const thankYouModal = document.getElementById('modal-thank-you');
+            ajaxForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerText;
+                    submitBtn.innerText = 'Sending...';
+                    submitBtn.disabled = true;
+                    const formData = new FormData(form);
+                    fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } })
+                    .then(response => response.json())
+                    .then(data => {
+                        if(data.success) {
+                            document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+                            thankYouModal.classList.add('active');
+                            document.body.style.overflow = 'hidden';
+                            form.reset();
+                        } else { alert(data.message || 'Something went wrong.'); }
+                    })
+                    .catch(error => { console.log(error); alert('Error checking the server.'); })
+                    .finally(() => { submitBtn.innerText = originalText; submitBtn.disabled = false; });
+                });
+            });
+
+            // Swiper Carousels
+            document.querySelectorAll('.init-swiper').forEach(function(swiperElement) {
+                let config = JSON.parse(swiperElement.querySelector('.swiper-config').innerHTML.trim());
+                config.observer = true; config.observeParents = true;
+                if(config.autoplay) {
+                    config.on = {
+                        init: function() {
+                            this.el.addEventListener('mouseenter', () => { this.autoplay.stop(); });
+                            this.el.addEventListener('mouseleave', () => { this.autoplay.start(); });
+                        }
+                    }
+                }
+                new Swiper(swiperElement, config);
+            });
+
+            // Success Stories Tabs & Mobile Accordion
+            const tabBtns = document.querySelectorAll('.custom-tab-btn, .mobile-accordion-btn, .tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    const targetId = btn.dataset.tab;
+                    document.querySelectorAll(`[data-tab="${targetId}"]`).forEach(b => b.classList.add('active'));
+                    document.getElementById(targetId).classList.add('active');
+                    AOS.refresh();
+                });
+            });
+
+            // Contact Form Tabs
+            const contactTabBtns = document.querySelectorAll('.contact-tab-btn');
+            const contactTabContents = document.querySelectorAll('.contact-tab-content');
+            contactTabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    contactTabBtns.forEach(b => b.classList.remove('active'));
+                    contactTabContents.forEach(c => c.classList.remove('active'));
+                    btn.classList.add('active');
+                    const targetId = btn.dataset.target;
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            // Phone Field Country Code Dynamic Flag and 'Other' Option Toggle
+            document.querySelectorAll('.country-select').forEach(select => {
+                select.addEventListener('change', function() {
+                    const flagCode = this.options[this.selectedIndex].getAttribute('data-flag');
+                    const wrapper = this.closest('.country-code-wrapper');
+                    const customCodeInput = wrapper.nextElementSibling;
+                    const flagImg = wrapper.querySelector('.selected-flag');
+                    
+                    if (flagCode === 'other') {
+                        wrapper.style.display = 'none';
+                        if(customCodeInput && customCodeInput.classList.contains('country-code-input')) {
+                            customCodeInput.classList.add('active');
+                            customCodeInput.required = true;
+                            customCodeInput.focus();
+                        }
+                    } else if(flagCode) {
+                        flagImg.src = `https://flagcdn.com/w20/${flagCode}.png`;
+                        flagImg.style.display = 'block';
+                        this.classList.remove('hidden');
+                        flagImg.classList.remove('hidden');
+                        if(customCodeInput) {
+                            customCodeInput.classList.remove('active');
+                            customCodeInput.required = false;
+                        }
+                    } else {
+                        flagImg.style.display = 'none';
+                    }
+                });
+            });
+
+            // Modals - Click Trigger
+            const openBtns = document.querySelectorAll('.popup-trigger');
+            const closeBtns = document.querySelectorAll('.modal-close, .modal-close-btn');
+            openBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    let targetId = btn.hasAttribute('data-modal') ? btn.getAttribute('data-modal') : btn.getAttribute('href').substring(1);
+                    const modal = document.getElementById(targetId);
+                    if(modal) { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+                });
+            });
+
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.closest('.modal-overlay').classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            window.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal-overlay')) { e.target.classList.remove('active'); document.body.style.overflow = ''; }
+            });
+
+            // Cookie Banner
+            const cookieBanner = document.getElementById('cookieBanner');
+            let bannerDismissed = false; let bannerTriggered = false;
+
+            const dismissBanner = () => { cookieBanner.classList.remove('show'); bannerDismissed = true; };
+            if(document.getElementById('acceptCookies')) document.getElementById('acceptCookies').addEventListener('click', dismissBanner);
+            if(document.getElementById('declineCookies')) document.getElementById('declineCookies').addEventListener('click', dismissBanner);
+            if(document.getElementById('settingsCookies')) document.getElementById('settingsCookies').addEventListener('click', () => {
+                document.getElementById('modal-cookie-settings').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    const whatsappIcon = document.getElementById('whatsappIcon');
+                    const chatbotIcon = document.getElementById('chatbotIcon');
+                    if(whatsappIcon) whatsappIcon.classList.add('show');
+                    if(chatbotIcon) chatbotIcon.classList.add('show');
+                    if (cookieBanner && !bannerDismissed && !bannerTriggered) {
+                        cookieBanner.classList.add('show');
+                        bannerTriggered = true;
+                    }
+                } 
+            });
+
+            // Dynamic Year Footer Update
+            const yearElement = document.getElementById('dynamicYear');
+            if(yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+            // ---------------------------------------------------------
+            // AI Chatbot Logic
+            // ---------------------------------------------------------
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            const chatBody = document.getElementById('chatBody');
+            const typingIndicator = document.getElementById('typingIndicator');
+            const chatInput = document.getElementById('chatInput');
+            const chatbotIcon = document.getElementById('chatbotIcon');
+
+            if(chatbotIcon) {
+                chatbotIcon.addEventListener('click', () => {
+                    chatbotWindow.classList.toggle('active');
+                });
+            }
+            if(document.getElementById('chatbotClose')) {
+                document.getElementById('chatbotClose').addEventListener('click', () => {
+                    chatbotWindow.classList.remove('active');
+                });
+            }
+
+            // Simple Knowledge Base
+            const kb = {
+                "careernet": "Careernet is the leading talent solutions provider for Fortune 500 enterprises and high-growth companies. We offer permanent hiring, staffing, leadership search, Emiratization, and market entry solutions globally with a strong Middle East focus.",
+                "hirepro": "HirePro is our AI-powered recruitment automation platform. It provides technical and functional skill assessments, live and agentic AI interviews, and intelligent workflow automation to screen candidates at scale.",
+                "longhouse": "Longhouse Consulting provides specialized executive search and leadership advisory. We help organizations navigate change and build enduring leadership capabilities across various functions and growth stages.",
+                "mycareernet": "MyCareernet focuses on employer branding and talent community engagement. We help you build your brand from campus to corporate, offering targeted talent visibility and custom hiring campaigns."
+            };
+
+            window.sendChatMessage = function() {
+                if(!chatInput) return;
+                const text = chatInput.value.trim();
+                if(!text) return;
+                
+                // Add user message
+                addMessage(text, 'user');
+                chatInput.value = '';
+                
+                // Show typing indicator
+                typingIndicator.style.display = 'block';
+                chatBody.appendChild(typingIndicator); // Move to bottom
+                chatBody.scrollTop = chatBody.scrollHeight;
+
+                // Simulate internet fetching / processing delay
+                setTimeout(() => {
+                    typingIndicator.style.display = 'none';
+                    let response = getBotResponse(text.toLowerCase());
+                    addMessage(response, 'bot');
+                }, 1500);
+            };
+
+            function addMessage(text, sender) {
+                const div = document.createElement('div');
+                div.className = `msg ${sender}`;
+                div.innerText = text;
+                chatBody.insertBefore(div, typingIndicator);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+
+            function getBotResponse(input) {
+                let foundBrands = [];
+                if(input.includes("careernet")) foundBrands.push(kb["careernet"]);
+                if(input.includes("hirepro")) foundBrands.push(kb["hirepro"]);
+                if(input.includes("longhouse")) foundBrands.push(kb["longhouse"]);
+                if(input.includes("mycareernet")) foundBrands.push(kb["mycareernet"]);
+
+                if(foundBrands.length > 0) {
+                    return foundBrands.join("\n\n");
+                } else if(input.includes("hello") || input.includes("hi")) {
+                    return "Hello! Feel free to ask me details about Careernet, HirePro, Longhouse, or MyCareernet.";
+                } else {
+                    return "I am currently focused on providing details about Careernet, HirePro, Longhouse, and MyCareernet. Please ask me about these brands!";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
